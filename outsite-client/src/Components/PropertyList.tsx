@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { fetchProperties } from '../ApiService/fetchProperties';
 import { Property } from '../Interfaces/Property';
-import { PropInfo } from '../Interfaces/PropInfo';
 import PropertyItem from './PropertyItem';
 
 const PropertyList = ({ selectedRegion }) => {
