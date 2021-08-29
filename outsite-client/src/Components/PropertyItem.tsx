@@ -7,8 +7,8 @@ const PropertyItem = ({ property }) => {
     <div>
       <img src={property.wfContent.heroImage} alt={property.wfContent.name} />
       <div>
-        <p>name: {property.wfContent.name}</p>
-        <p>houseName: {property.wfContent.houseName}</p>
+        <p>{property.wfContent.name}</p>
+        <p>{property.wfContent.houseName}</p>
       </div>
     </div>
   );

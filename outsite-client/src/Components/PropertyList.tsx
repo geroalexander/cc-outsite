@@ -1,21 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import { fetchProperties } from '../ApiService/fetchProperties';
+import React, { useContext } from 'react';
 import { Property } from '../Interfaces/Property';
 import PropertyItem from './PropertyItem';
+import GlobalContext from '../globalContext';
 
 const PropertyList = ({ selectedRegion }) => {
-  const [properties, setProperties] = useState([]);
-
-  async function getProperties() {
-    const { getAllProperties } = await fetchProperties();
-    setProperties(getAllProperties);
-  }
-
-  useEffect(() => {
-    getProperties();
-  }, []);
-
-  console.log(properties);
+  const { properties } = useContext(GlobalContext);
 
   return (
     <div>

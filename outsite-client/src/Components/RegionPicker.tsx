@@ -1,13 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
+import GlobalContext from '../globalContext';
 
 const RegionPicker = ({ selectedRegion, setSelectedRegion }) => {
-  const regions = [
-    'United States',
-    'Latin America',
-    'Europe',
-    'Asia Pacific',
-    'Caribbean',
-  ];
+  const { regions } = useContext(GlobalContext);
 
   const handleClick = (e) => {
     setSelectedRegion(e.target.value);

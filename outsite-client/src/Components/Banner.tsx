@@ -1,8 +1,14 @@
 import React, { useEffect, useState } from 'react';
+import BookingForm from './BookingForm';
 import Image from '../assets/banner-outsite.jpeg';
 
 const Banner = () => {
-  return <img src={Image} alt="peopel chilling" />;
+  return (
+    <div>
+      <img src={Image} alt="people chilling" />
+      <BookingForm />
+    </div>
+  );
 };
 
 export default Banner;
