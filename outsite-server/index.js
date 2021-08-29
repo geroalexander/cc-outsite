@@ -1,9 +1,17 @@
 const express = require('express');
+const cors = require('cors');
+const LOCAL_HOST = 'http://localhost:3000';
 const { graphqlHTTP } = require('express-graphql');
 const schema = require('./schema');
 const root = require('./root');
 
 const app = express();
+
+const corsConfig = {
+  origin: LOCAL_HOST,
+  credentials: true,
+};
+app.use(cors(corsConfig));
 app.use(
   '/graphql',
   graphqlHTTP({

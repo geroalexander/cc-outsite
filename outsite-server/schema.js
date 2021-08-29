@@ -12,7 +12,7 @@ const schema = buildSchema(`
     name: String!
     country: String!
     region: String!
-    wfContent: [PropInfo]
+    wfContent: PropInfo
   }
 
   type PropInfo {
