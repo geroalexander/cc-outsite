@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Header from './Header';
-import Banner from './Banner';
 import PropertyList from './PropertyList';
 import RegionPicker from './RegionPicker';
 
