@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import GlobalContext from '../globalContext';
 
 const RegionPicker = ({ selectedRegion, setSelectedRegion }) => {
@@ -9,11 +9,15 @@ const RegionPicker = ({ selectedRegion, setSelectedRegion }) => {
   };
 
   return (
-    <div>
+    <div className="flex flex-wrap justify-items-center">
       {regions.map((region) => (
         <button
           value={region}
-          className={selectedRegion === region ? 'text-xl p-5' : 'p-5 text-sm'}
+          className={
+            selectedRegion === region
+              ? 'bg-green-300 text-white transition-colors duration-200 rounded-xl px-4 py-3'
+              : 'bg-white text-gray-700 hover:text-gray-900 transition-colors duration-200 rounded-xl px-4 py-3'
+          }
           onClick={handleClick}
         >
           {region}

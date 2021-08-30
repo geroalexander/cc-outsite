@@ -8,9 +8,14 @@ const Banner = () => {
       <div
         className="max-w-full h-96 bg-center bg-no-repeat bg-cover"
         style={{ backgroundImage: `url(${image})` }}
-      ></div>
-      {/* <img className="flex-shrink-0" src={image} alt="people chilling" /> */}
-      <BookingForm />
+      >
+        <div className="flex flex-col">
+          <div className="text-3xl leading-9 text-white font-semibold mb-4">
+            Work anywhere. Live differently
+          </div>
+          <BookingForm />
+        </div>
+      </div>
     </div>
   );
 };
