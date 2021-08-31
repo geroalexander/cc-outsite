@@ -7,7 +7,7 @@ const LocationContainer = () => {
   const [selectedRegion, setSelectedRegion] = useState('United States');
 
   return (
-    <div className="flex flex-col items-center sm:mx-20 md:mx-10 l:mx-16 xl:mx-20">
+    <div className="flex flex-col sm:mx-20 md:mx-10 l:mx-16 xl:mx-20">
       <RegionPicker
         selectedRegion={selectedRegion}
         setSelectedRegion={setSelectedRegion}

@@ -4,7 +4,11 @@ const PropertyItem = ({ property }) => {
   return (
     <div className="flex flex-col">
       <div className="aspect-w-4 aspect-h-3 bg-cover bg-no-repeat bg-cover">
-        <img className="rounded-md" src={property.wfContent.heroImage} alt="" />
+        <img
+          className="rounded-md "
+          src={property.wfContent.heroImage}
+          alt=""
+        />
       </div>
       <div className="py-2">
         <h4 className="text-lg leading-6 font-medium text-gray-900">

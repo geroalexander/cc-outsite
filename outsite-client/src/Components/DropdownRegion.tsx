@@ -2,7 +2,7 @@ import React, { useEffect, useState, useContext } from 'react';
 import { Property } from '../Interfaces/Property';
 import GlobalContext from '../globalContext';
 
-const DropdownRegion = ({ region }) => {
+const DropdownRegion = ({ region, handleClickHouse }) => {
   const [regionalProperties, setRegionalProperties] = useState<Property[]>([]);
   const [showList, setShowList] = useState(false);
 
@@ -21,8 +21,13 @@ const DropdownRegion = ({ region }) => {
       <div className={!showList ? 'hidden' : ''}>
         {regionalProperties.map((property) => (
           <li>
-            <span>{property.wfContent.name}</span>
-            <span>{property.wfContent.houseName}</span>
+            <button
+              onClick={() => handleClickHouse(property.wfContent.name)}
+              value={property.wfContent.name}
+            >
+              <span>{property.wfContent.name}</span>
+              <span>{property.wfContent.houseName}</span>
+            </button>
           </li>
         ))}
       </div>
