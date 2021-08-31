@@ -15,7 +15,10 @@ const DropdownRegion = ({ region, handleClickHouse }) => {
 
   return (
     <div>
-      <button onClick={() => setShowList(!showList)} className="border-2">
+      <button
+        onClick={() => setShowList(!showList)}
+        // className="relative w-full bg-white border border-gray-300 rounded-md shadow-sm pl-3 pr-10 py-2 text-left cursor-default focus:outline-none focus:ring-1 focus:ring-outsite-green focus:border-outsite-green sm:text-sm"
+      >
         {region}
       </button>
       <div className={!showList ? 'hidden' : ''}>

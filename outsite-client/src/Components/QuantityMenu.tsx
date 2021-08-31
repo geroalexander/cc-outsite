@@ -14,14 +14,14 @@ const QuantityMenu = () => {
   };
 
   return (
-    <div className="flex flex-col border-2 flex-1">
+    <div className="flex flex-col flex-1 p-1">
       <span className="text-sm leading-5 font-medium text-gray-700">
         Guests
       </span>
-      <div className="flex flex-col sm:flex-row flex-1">
+      <div className="justify-between flex flex-col sm:flex-row flex-1 h-10">
         <button
           onClick={() => setShowList(!showList)}
-          className="border-2 flex-1"
+          className="h-10 mr-0.5 my-1 relative w-full bg-white border border-gray-300 rounded-md shadow-sm pl-3 pr-10 py-2 text-left cursor-default focus:outline-none focus:ring-1 focus:ring-outsite-green focus:border-outsite-green sm:text-sm"
         >
           {guestQuantity}
         </button>
@@ -37,7 +37,7 @@ const QuantityMenu = () => {
             </button>
           </li>
         </ul>
-        <button className="border-2 flex-1 bg-outsite-blue text-white">
+        <button className="h-10 ml-0.5 my-1 relative w-full bg-outsite-green border border-gray-300 rounded-md shadow-sm pl-3 pr-10 py-2 text-center cursor-default focus:outline-none focus:ring-1 focus:ring-outsite-green focus:border-outsite-green sm:text-sm text-white">
           Search
         </button>
       </div>

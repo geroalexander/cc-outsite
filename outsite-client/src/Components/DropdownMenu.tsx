@@ -13,9 +13,12 @@ const DropdownMenu = () => {
   };
 
   return (
-    <div className="flex flex-col border-2 flex-1">
+    <div className="flex flex-col flex-1 p-1 my-1 ">
       <span className="text-sm leading-5 font-medium text-gray-700">Space</span>
-      <button onClick={() => setShowList(!showList)} className="border-2">
+      <button
+        onClick={() => setShowList(!showList)}
+        className="relative w-full bg-white border border-gray-300 rounded-md shadow-sm pl-3 pr-10 py-2 text-left cursor-default focus:outline-none focus:ring-1 focus:ring-outsite-green focus:border-outsite-green sm:text-sm"
+      >
         {selectedHouse}
       </button>
       <ul className={!showList ? 'hidden' : 'absolute top-20 left-8 bg-white'}>
