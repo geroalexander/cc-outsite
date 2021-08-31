@@ -13,7 +13,7 @@ const DropdownMenu = () => {
   };
 
   return (
-    <div className="flex flex-col flex-1 p-1 my-1 ">
+    <div className="flex flex-col flex-1 p-1 my-1 relative">
       <span className="text-sm leading-5 font-medium text-gray-700">Space</span>
       <button
         onClick={() => setShowList(!showList)}
@@ -21,11 +21,23 @@ const DropdownMenu = () => {
       >
         {selectedHouse}
       </button>
-      <ul className={!showList ? 'hidden' : 'absolute top-20 left-8 bg-white'}>
-        {regions.map((region) => (
-          <DropdownRegion handleClickHouse={handleClickHouse} region={region} />
-        ))}
-      </ul>
+      <div className="w-full">
+        <ul
+          className={
+            !showList
+              ? 'hidden'
+              : // : 'absolute top-20 left-4 bg-white overflow max-h-50 z-10 p-2 w-1/2'
+                'absolute z-10  mt-2 bg-white shadow-lg max-h-60 rounded-md py-1 text-base border overflow-auto focus:outline-none sm:text-sm  w-full'
+          }
+        >
+          {regions.map((region) => (
+            <DropdownRegion
+              handleClickHouse={handleClickHouse}
+              region={region}
+            />
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };

@@ -14,23 +14,28 @@ const DropdownRegion = ({ region, handleClickHouse }) => {
   }, [properties]);
 
   return (
-    <div>
+    <div className="relative">
       <button
         onClick={() => setShowList(!showList)}
+        className="flex justify-between w-full px-4 py-2 text-lg text-gray-900 text-left "
         // className="relative w-full bg-white border border-gray-300 rounded-md shadow-sm pl-3 pr-10 py-2 text-left cursor-default focus:outline-none focus:ring-1 focus:ring-outsite-green focus:border-outsite-green sm:text-sm"
       >
         {region}
       </button>
       <div className={!showList ? 'hidden' : ''}>
         {regionalProperties.map((property) => (
-          <li>
-            <button
+          <li className="cursor-default select-none relative py-1 pl-8 pr-4 hover:bg-gray-200">
+            <div
               onClick={() => handleClickHouse(property.wfContent.name)}
-              value={property.wfContent.name}
+              className="flex flex-col"
             >
-              <span>{property.wfContent.name}</span>
-              <span>{property.wfContent.houseName}</span>
-            </button>
+              <span className="text-gray-900 text-base truncate transition-colors duration-200">
+                {property.wfContent.name}
+              </span>
+              <span className="text-gray-600 text-xs tracking-widest uppercase truncate">
+                {property.wfContent.houseName}
+              </span>
+            </div>
           </li>
         ))}
       </div>
