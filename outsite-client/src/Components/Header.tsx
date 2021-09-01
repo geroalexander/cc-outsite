@@ -3,7 +3,13 @@ import { FaUserCircle } from 'react-icons/fa';
 import logo from '../assets/logo-outsite.jpeg';
 
 const Header = () => {
-  const tabs = ['Book', 'Trips', 'Rewards', 'Refer a Friend', 'Membership'];
+  const tabs: String[] = [
+    'Book',
+    'Trips',
+    'Rewards',
+    'Refer a Friend',
+    'Membership',
+  ];
 
   return (
     <div className="flex flex-row justify-between p-2 items-center">

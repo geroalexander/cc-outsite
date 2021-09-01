@@ -26,7 +26,7 @@ const DropdownRegion = ({ region, handleClickHouse }) => {
         {regionalProperties.map((property) => (
           <li className="cursor-default select-none relative py-1 pl-8 pr-4 hover:bg-gray-200">
             <div
-              onClick={() => handleClickHouse(property.wfContent.name)}
+              onClick={() => handleClickHouse(property)}
               className="flex flex-col"
             >
               <span className="text-gray-900 text-base truncate transition-colors duration-200">

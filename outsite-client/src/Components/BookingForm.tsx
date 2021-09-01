@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import DropdownMenu from './DropdownMenu';
 import QuantityMenu from './QuantityMenu';
 import CalenderMenu from './CalenderMenu';
+import { Link } from 'react-router-dom';
 
 const BookingForm = () => {
   return (
@@ -20,7 +21,7 @@ const BookingForm = () => {
         <div className="flex flex-col sm:flex-row flex-1 items-end">
           <QuantityMenu />
           <button className="h-10 ml-0.5 my-1 relative w-full sm:w-1/2 bg-outsite-green border border-gray-300 rounded-md shadow-sm pl-3 pr-10 py-2 text-center cursor-default focus:outline-none focus:ring-1 focus:ring-outsite-green focus:border-outsite-green sm:text-sm text-white mb-2">
-            Search
+            <Link to={`search?where=fakesearchplaceholder`}>Search</Link>
           </button>
         </div>
       </div>

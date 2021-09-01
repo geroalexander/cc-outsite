@@ -4,8 +4,9 @@ import GlobalContext from '../globalContext';
 
 const DropdownMenu = () => {
   const { regions } = useContext(GlobalContext);
+
+  const [selectedHouse, setSelectedHouse] = useState('Lisbon - Cais do Sodre');
   const [showList, setShowList] = useState(false);
-  const [selectedHouse, setSelectedHouse] = useState('Lisbon - Intendente');
 
   const handleClickHouse = (property) => {
     setSelectedHouse(property);
