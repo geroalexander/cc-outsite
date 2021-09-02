@@ -2,10 +2,11 @@
 ---
 
 ## Starting Dev Environment
-1. cd into server using ``` cd outsite-server ```
-2. start server using ``` nodemon ``` - install nodemon [here](https://www.npmjs.com/package/nodemon).
-3. cd into client using ``` cd ../outsite-client ```
-4. start client using ``` nodemon ```
+1. installing dependencies: ``` npm i  ```
+3. cd into server using ``` cd outsite-server ```
+4. start server using ``` nodemon ``` - install nodemon [here](https://www.npmjs.com/package/nodemon).
+5. cd into client using ``` cd ../outsite-client ```
+6. start client using ``` nodemon ```
 
 ---
 
